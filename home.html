@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Binge with Isha</title>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap" rel="stylesheet">
+
+  <style>
+    /* Body styling */
+    body {
+      margin: 0;
+      font-family: 'Oswald', sans-serif;
+      background-color: #181818;
+      color: #333;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    header {
+      font-family: 'Luckiest Guy', cursive;
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: #222;
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 40px;
+      z-index: 1000;
+      margin-left: 20px;
+      display: inline-block;
+    }
+
+    header h1 {
+      font-size: 30px;
+      margin: 0;
+      color: #E63895;
+      font-family: 'Oswald', sans-serif;
+    }
+    nav {
+  width: 100%; 
+  }
+
+    nav ul {
+      justify-content: center; 
+      font-family: 'Oswald', sans-serif;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      gap: 20px;
+    }
+
+    nav ul li {
+      display: inline;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: white;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+
+    nav ul li a:hover {
+      color: #EDBEDA;
+    }
+
+    .container {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      margin-top: 100px;
+      padding: 20px;
+      max-width: 1200px;
+      width: 100%;
+    }
+ 
+    .item {
+      background-color: #fff;
+      border-radius: 15px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+      text-align: center;
+      transition: transform 0.2s;
+      position: relative; 
+    }
+
+    .item:hover {
+      transform: translateY(-5px);
+    }
+
+    .item h2 {
+      font-family: 'Oswald', sans-serif;
+      font-size: 30px;
+      color: #E63895;
+    }
+
+    .item p {
+      font-size: 20px;
+      color: #E63895;
+      margin-bottom: 20px;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .item1 {
+      grid-column: span 2;
+      height: 200px; 
+    }
+
+    .item2 {
+      height: 200px;
+    }
+
+    .item3, .item4, .item5 {
+      height: 300px;
+      background-repeat: no-repeat;
+      background-position: bottom center;
+      background-size: cover;
+      position: relative;
+    }
+
+    .item3 {
+      background-image: url('https://i.guim.co.uk/img/media/75deb81ee5945939721d519c2e52f12b743ff52b/85_113_4889_3699/master/4889.jpg?width=700&quality=85&auto=format&fit=max&s=0e7e24cfea85b40f864e656faef1d6f2');
+    }
+
+    .item4 {
+      background-image: url('https://cdn-images.dzcdn.net/images/cover/3fc1aa2cb42822f6ca053b1dc9f0fdf3/0x1900-000000-80-0-0.jpg');
+    }
+
+    .item5 {
+      background-image: url('https://i.pinimg.com/736x/41/a4/ba/41a4ba767c50d11ac4ce6ebe46d18b53.jpg');
+    }
+
+    .item3::before, .item4::before, .item5::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: rgba(0, 0, 0, 0.7); 
+      z-index: 1;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    .item3:hover::before, .item4:hover::before, .item5:hover::before {
+      opacity: 1;
+    }
+
+    .text-overlay {
+      position: absolute;
+      bottom: 20px;
+      left: 20px;
+      right: 20px;
+      color: white;
+      font-size: 20px;
+      z-index: 2;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    .item3:hover .text-overlay, .item4:hover .text-overlay, .item5:hover .text-overlay {
+      opacity: 1;
+    }
+
+    .footer {
+      text-align: center;
+      padding: 20px;
+      background: #222;
+      color: white;
+      margin-top: 30px;
+      width: 100%;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>JAM WITH ISHA</h1>
+    <nav>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Author</a></li>
+        <li><a href="#">Grentperez</a></li>
+        <li><a href="#">Laufey</a></li>
+        <li><a href="#">Clairo</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="container">
+    <div class="item item1">
+      <h2>WELCOME!</h2>
+      <p>Discover personalized music recommendations on Jam with Isha. Explore handpicked tracks across indie pop, lo-fi, and jazz-inspired sounds. Find fresh artists, vibe to unique melodies, and let the music guide you to your next jam!</p>
+    </div>
+    <div class="item item2">
+      <h2>MEET THE AUTHOR</h2>
+      <p>Hi, I’m Isha! I created Jam with Isha to share my love for discovering fresh, unique music.</p>
+    </div>
+    <div class="item item3">
+      <div class="text-overlay">
+            <h2>GRENTPEREZ</h2>
+        <p>Grentperez brings mellow lo-fi beats and heartfelt lyrics, creating soothing and emotionally rich music to unwind to.</p>
+      </div>
+    </div>
+    <div class="item item4">
+      <div class="text-overlay">
+        <h2>Laufey</h2>
+        <p>Laufey’s jazz-inspired indie melodies bring elegance and charm, capturing deep emotions through her soulful voice.</p>
+      </div>
+      </div>
+
+ <div class="item item5">
+      <div class="text-overlay">
+        <h2>Clairo</h2>
+        <p>Clairo mixes dreamy indie pop with lo-fi vibes, offering intimate, soulful tracks perfect for laid-back listening.</p>
+      </div>
+    </div>
+  </section>
+
+  <div class="footer">
+    <p>&copy; 2025 JAM WITH ISHA | Discover Music</p>
+  </div>
+
+</body>
+</html>
+
+ 
